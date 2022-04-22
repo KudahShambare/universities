@@ -1,0 +1,11 @@
+*{
+
+    text-align: center;
+
+}
+select{
+background-color:grey;
+height: 5vh;
+width:25vh;
+margin-top:10%;
+}
