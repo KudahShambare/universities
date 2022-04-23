@@ -1,7 +1,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import styled from 'styled-components';
 import Welcome from '../components/Welcome';
-import GetStarted from "../components/GetStarted";
+import "../components/Components.css";
+import PageHeader from  "../components/PageHeader.js";
 
 const Home: React.FC = () => {
  
@@ -9,16 +10,10 @@ const Home: React.FC = () => {
    
   
     <IonPage>
-      <IonHeader id='home-header'>
-        <IonToolbar>
-          <IonTitle >SA Universities Info</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+ <PageHeader/>
       <IonContent >
-        
+     
    <Welcome/>
-<GetStarted/>
-
       </IonContent>
     </IonPage>
   );
