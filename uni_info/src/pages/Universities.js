@@ -4,13 +4,15 @@ import "../components/Components.css"
 import PageHeader from  "../components/PageHeader.js";
 import  {Form  }  from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import  data from  "../data.js"
-
+import  data from  "../data.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Chosen from '../pages/Chosen.js';
+
+
+
 
 const Universities=()=>{
 
-console.log(data)
 
 
 return(
@@ -19,7 +21,9 @@ return(
 <div id="uniList">
 
 <Form.Select aria-label="Default select example"    onChange={(e)=>{
-console.log(e.target.value)
+e.preventDefault();
+const value=e.target.value;
+
 }}>
   <option>Select a university</option>
 
@@ -31,7 +35,15 @@ return <option key={elem.name}>{elem.name} </option>
 
 </Form.Select>
 
-<Link to="my-choice">
+
+<Link to={
+{
+pathname:"my-choice",
+state:{
+university:{}
+}
+}
+}>
 
 <button id="getInfo"   >  Get Information </button>
 
